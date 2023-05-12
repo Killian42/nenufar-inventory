@@ -3,6 +3,8 @@ Makes an inventory of pulsar observations from nenufar, along with a database co
 
 The observation inventory is stored in the *pulsar-obs-inventory-**date**.csv* file and the parameters/observation information is stored in the *psr_info.csv* file.
 
+The code to make the observation timeline (*obs-timeline.py*) can be run once the inventory file is created. 
+
 ## How to use
 * Install the project with git
 * Move into the newly created directory
@@ -14,6 +16,7 @@ The observation inventory is stored in the *pulsar-obs-inventory-**date**.csv* f
   * numpy
   * pandas
   * matplotlib
+  * astropy
   * psrqpy (version 1.2.6 or higher is best)
   * warnings, os and glob (usually installed by default)
 
@@ -22,4 +25,4 @@ The observation inventory is stored in the *pulsar-obs-inventory-**date**.csv* f
    * bc (Basic Calculator)
 
 ## Additional info
-* You can safely ignore the ```ls: cannot access '*.fits': No such file or directory``` error messages, they come up when the directory for an observation mode is empty.
+* You can safely ignore the ```ls: cannot access '*.fits': No such file or directory``` error messages when the inventory is being created, they come up when the directory for an observation mode is empty.
