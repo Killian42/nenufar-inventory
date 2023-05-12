@@ -1,3 +1,11 @@
+"""
+Author: Killian Lebreton, University of Orleans / LPC2E
+Date: 2023-03 to 2023-08, Master 2 Internship
+Description: This code creates a csv file containing basic information
+on pulsars observed by the nenufar telescope, along with the number and
+duration of these observations
+"""
+
 ### Librairies ###
 import numpy as np
 import pandas as pd

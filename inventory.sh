@@ -1,6 +1,8 @@
 #! /bin/bash
 
-### This script creates an inventory of the data available of nenufar pulsar observations
+### Author: Killian Lebreton, University of Orleans / LPC2E
+### Date: 2023-03 to 2023-08, Master 2 Internship
+### Description: This script creates an inventory of nenufar pulsar observations
 ### Input: None 									  
 ### Output: A CSV file containing basic information about the observed pulsars (POS,DM,P0,RM)
 ###	    and information on the observation files (number of files, number of unique 
