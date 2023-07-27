@@ -7,12 +7,14 @@ nenufar pulsar observations for every pulsar in the inventory
 
 ### Libraries ###
 from astropy.time import Time
+import matplotlib
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 import numpy as np
 import pandas as pd
 import glob
 import os
+matplotlib.rcParams["font.size"] = 17
 
 ### Data importation and preparation ###
 file=glob.glob(os.getcwd() + "/pulsar-obs-inventory*.csv")[-1]
@@ -58,7 +60,7 @@ def timeline_mkr(psr_arr,disp=False):
         ys,
         c=col,
         marker="x",
-        s=20,
+        s=25,
         lw=1,
         zorder=5,
     )
@@ -78,7 +80,9 @@ def timeline_mkr(psr_arr,disp=False):
 
     ax2.set_xlabel("UTC")
 
-    plt.title("Nenufar pulsar observations timeline of " + psr_arr[-1] + " to " + psr_arr[0],pad=20,size=20)   
+    plt.xticks(rotation=10)
+
+    plt.title("Nenufar pulsar observations timeline of " + psr_arr[-1] + " to " + psr_arr[0],pad=8,size=20)   
 
     pdf.savefig()  # saves the current figure into a pdf page  
     plt.close()
