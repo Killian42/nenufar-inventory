@@ -27,6 +27,7 @@ do
       ;;
     *)
       echo "Unexpected option: $1"
+      exit 1
       ;;
   esac
 done
