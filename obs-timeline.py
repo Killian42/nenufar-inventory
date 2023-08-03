@@ -170,9 +170,9 @@ with PdfPages(os.getcwd() +'/obs_timeline_'+args.scope+'.pdf') as pdf:
         timeline_mkr(np.flip(arr))
 
 if args.email is not None:
-    content = "test content"
-    subject = "NenuFAR observation timeline"
-    attachment_path = os.getcwd() +'\obs_timeline_'+args.scope+'.pdf'
+    content = "This is an email your requested regarding NenuFAR pulsar observations. \n Please find attached a pdf with a timeline of these observations."
+    subject = "NenuFAR pulsar observation timeline"
+    attachment_path = os.getcwd() +'/obs_timeline_'+args.scope+'.pdf'
     recipients = args.email
 
     command = 'echo "{}" | mail -s "{}" -A {} {}'.format(content,subject, attachment_path, ','.join(recipients))

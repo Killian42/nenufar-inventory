@@ -1,7 +1,7 @@
 #! /bin/bash
 
-SHORT=s:,h
-LONG=scope:,help
+SHORT=s:,e:,h
+LONG=scope:,email:,help
 OPTS=$(getopt --alternative --name inventory --options $SHORT --longoptions $LONG -- "$@")
 
 eval set -- "$OPTS"
@@ -10,7 +10,11 @@ while :
 do
   case "$1" in
     -s | --scope )
-      city1="$2"
+      scope="$2"
+      shift 2
+      ;;
+    -e | --email )
+      email="$2"
       shift 2
       ;;
     -h | --help)
@@ -27,10 +31,8 @@ do
   esac
 done
 
-echo $scope
-
 bash ./inventory.sh
 
 python3 inventory-follow-up.py
 
-python3 obs-timeline.py -s $scope
+python3 obs-timeline.py -s $scope -e $email
