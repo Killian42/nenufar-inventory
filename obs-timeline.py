@@ -14,6 +14,8 @@ import matplotlib.ticker as ticker
 from matplotlib.backends.backend_pdf import PdfPages
 import numpy as np
 import pandas as pd
+from pandas.plotting import register_matplotlib_converters
+register_matplotlib_converters()
 import glob
 import os
 import argparse

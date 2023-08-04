@@ -14,9 +14,11 @@ The code to make the observation timeline (*obs-timeline.py*) can be run on its 
 *obs-timeline.py* has the following command line arguments:
 * -s,--scope : Makes the timeline for the last week (*thisweek* option) or since the beginning (*all* option) (Default: *all*)
 * -e,--email : Sends the pdf by email to the given email adresse(s) (Default: None)
+
 These options can be given directly when running *launcher.sh*, they will be relayed to *obs-timeline.py*.
 
 ## Requirements
+It's best to run this software while using the Python3 Singularity container (Sing_py3), otherwise here are the necessary programs:
 * Python3 with the following packages:
   * numpy
   * pandas
